@@ -3,7 +3,6 @@ import { StepProps, Todo } from "../types";
 import { TodoItem } from "./TodoItem";
 
 import styles from "./Step.module.css";
-import { useMemo } from "react";
 
 export const Step = ({
   step,
@@ -13,11 +12,9 @@ export const Step = ({
   canMoveLeftFn = () => true,
   canMoveRightFn = () => true,
 }: StepProps) => {
-  const currentTodos: Todo[] = useMemo(() => {
-    return step.todos
-      .map((todoId) => todos.find((todo) => todo.id === todoId)!)
-      .filter(Boolean);
-  }, [step]);
+  const currentTodos: Todo[] = step.todos
+    .map((todoId) => todos.find((todo) => todo.id === todoId)!)
+    .filter(Boolean);
 
   return (
     <div className={styles.step}>
