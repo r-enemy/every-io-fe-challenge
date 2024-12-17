@@ -1,0 +1,32 @@
+.todoItem {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.content {
+    flex: 1;
+    text-align: center;
+}
+
+.button {
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+}
+.buttonForward {
+    background-color: #158900;
+}
+.buttonBack {
+    background-color: #890022;
+}
