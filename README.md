@@ -1,3 +1,27 @@
+## Candidate Notes
+
+Hi, welcome to my implementation of every.io challenge!
+
+It took me ~4h of work to get to this state.
+
+What I think is worth mentioning:
+
+* Aside a helper function (`id()`), all implemented code will be inside the `feat` folder.
+* I followed the Container pattern for componentization. `TodoContainer` guards all the state management while 
+  all other components are pure visual.
+* State management: I created a `useTodos` hook with a simple and stable interface to manage all the state. 
+  Since it's a simple state, I just used the default `useState` to manage it. If the app grows, we could easily replace 
+  it with a more robust tool (e.g. react query, redux, zustand, etc.)
+* Test: I added a few tests that I think make more sense in this particular case: the state management hook and the 
+  container, so: 1. replacing the state management tool is safer and 2. the feature works as expected.
+
+
+To get it running, just run `yarn` to install node dependencies and then `yarn start`.
+
+Thank you!
+
+---
+
 ## Video Intro
 https://www.loom.com/share/3df7fcb5424644638b00724cb178e2ff
 
